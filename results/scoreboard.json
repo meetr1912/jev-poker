@@ -1,0 +1,163 @@
+{
+  "players": {
+    "HouseBot-A": "A",
+    "HouseBot-B": "B"
+  },
+  "starting_money": 1000,
+  "hands_played": 20,
+  "points": {
+    "HouseBot-A": 13,
+    "HouseBot-B": 7,
+    "splits": 0
+  },
+  "money": {
+    "HouseBot-A": 2000,
+    "HouseBot-B": 0
+  },
+  "net": {
+    "HouseBot-A": 1000,
+    "HouseBot-B": -1000
+  },
+  "ledger": [
+    {
+      "hand": 1,
+      "winner": "HouseBot-B",
+      "pot": 16,
+      "money_a": -4,
+      "money_b": 4
+    },
+    {
+      "hand": 2,
+      "winner": "HouseBot-A",
+      "pot": 16,
+      "money_a": 4,
+      "money_b": -4
+    },
+    {
+      "hand": 3,
+      "winner": "HouseBot-A",
+      "pot": 384,
+      "money_a": 192,
+      "money_b": -192
+    },
+    {
+      "hand": 4,
+      "winner": "HouseBot-A",
+      "pot": 40,
+      "money_a": 16,
+      "money_b": -16
+    },
+    {
+      "hand": 5,
+      "winner": "HouseBot-A",
+      "pot": 72,
+      "money_a": 36,
+      "money_b": -36
+    },
+    {
+      "hand": 6,
+      "winner": "HouseBot-B",
+      "pot": 16,
+      "money_a": -4,
+      "money_b": 4
+    },
+    {
+      "hand": 7,
+      "winner": "HouseBot-A",
+      "pot": 16,
+      "money_a": 4,
+      "money_b": -4
+    },
+    {
+      "hand": 8,
+      "winner": "HouseBot-B",
+      "pot": 16,
+      "money_a": -4,
+      "money_b": 4
+    },
+    {
+      "hand": 9,
+      "winner": "HouseBot-A",
+      "pot": 40,
+      "money_a": 16,
+      "money_b": -16
+    },
+    {
+      "hand": 10,
+      "winner": "HouseBot-A",
+      "pot": 16,
+      "money_a": 4,
+      "money_b": -4
+    },
+    {
+      "hand": 11,
+      "winner": "HouseBot-A",
+      "pot": 16,
+      "money_a": 4,
+      "money_b": -4
+    },
+    {
+      "hand": 12,
+      "winner": "HouseBot-B",
+      "pot": 24,
+      "money_a": -12,
+      "money_b": 12
+    },
+    {
+      "hand": 13,
+      "winner": "HouseBot-A",
+      "pot": 16,
+      "money_a": 4,
+      "money_b": -4
+    },
+    {
+      "hand": 14,
+      "winner": "HouseBot-B",
+      "pot": 96,
+      "money_a": -48,
+      "money_b": 48
+    },
+    {
+      "hand": 15,
+      "winner": "HouseBot-A",
+      "pot": 16,
+      "money_a": 4,
+      "money_b": -4
+    },
+    {
+      "hand": 16,
+      "winner": "HouseBot-B",
+      "pot": 16,
+      "money_a": -4,
+      "money_b": 4
+    },
+    {
+      "hand": 17,
+      "winner": "HouseBot-A",
+      "pot": 56,
+      "money_a": 28,
+      "money_b": -28
+    },
+    {
+      "hand": 18,
+      "winner": "HouseBot-B",
+      "pot": 24,
+      "money_a": -12,
+      "money_b": 12
+    },
+    {
+      "hand": 19,
+      "winner": "HouseBot-A",
+      "pot": 1680,
+      "money_a": 672,
+      "money_b": -672
+    },
+    {
+      "hand": 20,
+      "winner": "HouseBot-A",
+      "pot": 216,
+      "money_a": 104,
+      "money_b": -104
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+[project]
+name = "jev-poker"
+version = "0.1.0"
+description = "Watch Jev (TypeSafe) play heads-up No-Limit Hold'em, with its decision probabilities on the side."
+requires-python = ">=3.11"
+dependencies = [
+  "pokerkit>=0.7.4",
+  "httpx[http2]>=0.28,<1",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.4,<9", "ruff>=0.14,<1"]
+
+[project.scripts]
+jev-poker = "jev_poker.demo:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["jev_poker"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,6 @@
+# Default owner for everything in this repo.
+* @meetr1912
+
+/.github/ @meetr1912
+/jev_poker/engine.py @meetr1912
+/jev_poker/scoreboard.py @meetr1912

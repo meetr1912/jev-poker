@@ -1,0 +1,62 @@
+name: Scoreboard
+
+# Captures a full money/points scorecard between two local agents.
+# Runs entirely offline: no API keys, no tokens, no paid model calls.
+# The real Jev path (--offline omitted) needs TYPESAFE_API_KEY and is never
+# run in CI.
+
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch:
+    inputs:
+      hands:
+        description: "Number of hands to play"
+        required: false
+        default: "100"
+      stack:
+        description: "Starting stack per player (dollars)"
+        required: false
+        default: "1000"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scoreboard-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scoreboard:
+    name: offline AI vs AI scorecard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: uv sync --dev
+
+      - name: Play a match and capture money + points
+        env:
+          HANDS: ${{ github.event.inputs.hands || '100' }}
+          STACK: ${{ github.event.inputs.stack || '1000' }}
+        run: |
+          uv run jev-poker --headless --offline \
+            --hands "$HANDS" --stack "$STACK" --delay 0 --seed 11 \
+            --results-dir results
+
+      - name: Show scoreboard
+        run: cat results/SCOREBOARD.md
+
+      - name: Upload scorecard artifact
+        uses: actions/upload-artifact@v5
+        with:
+          name: scoreboard-${{ github.sha }}
+          path: results/
+          if-no-files-found: error

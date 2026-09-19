@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jev Poker · heads-up NLHE</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">JEV<span>·</span>POKER</div>
+      <div class="meta">
+        <span id="hand">hand –</span>
+        <span id="street">–</span>
+        <span id="score">Jev 0 · Bot 0</span>
+      </div>
+      <div class="controls">
+        <button id="start">Run match</button>
+        <button id="stop" class="ghost">Stop</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="table-panel">
+        <div class="felt">
+          <div class="seat bot">
+            <div class="name">HouseBot <span id="bot-stack">–</span></div>
+            <div class="cards" id="bot-cards"></div>
+          </div>
+          <div class="center">
+            <div class="pot">pot <b id="pot">0</b></div>
+            <div class="board" id="board"></div>
+            <div class="status" id="status">Press “Run match”.</div>
+          </div>
+          <div class="seat jev">
+            <div class="name">Jev <span id="jev-stack">–</span></div>
+            <div class="cards" id="jev-cards"></div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="brain-panel">
+        <div class="brain-head">
+          <h2>Jev's thinking</h2>
+          <span id="brain-model" class="badge">–</span>
+        </div>
+        <p id="brain-summary" class="summary">Waiting for the first decision…</p>
+        <div class="stats">
+          <div><label>confidence</label><b id="confidence">–</b></div>
+          <div><label>latency</label><b id="latency">–</b></div>
+          <div><label>street</label><b id="brain-street">–</b></div>
+        </div>
+        <div id="bars" class="bars"></div>
+        <div class="log-head">Decision log</div>
+        <ol id="log" class="log"></ol>
+      </aside>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
