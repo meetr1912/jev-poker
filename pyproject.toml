@@ -9,7 +9,7 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = ["pytest>=8.4,<9", "ruff>=0.14,<1"]
+dev = ["pytest>=8.4,<10", "ruff>=0.14,<1"]
 
 [project.scripts]
 jev-poker = "jev_poker.demo:main"
